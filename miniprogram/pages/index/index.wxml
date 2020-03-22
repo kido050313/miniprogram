@@ -1,0 +1,13 @@
+<!--miniprogram/pages/index/index.wxml-->
+<swiper indicator-dots="true" autoplay="true" interval="2000" duration="1000" indicator-active-color="#fff">
+  <block wx:for="{{swiperImgUrls}}" wx:key="index">
+    <swiper-item>
+       <image class="banner-img" src="{{item.url}}" mode="widthFit"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="playlist-container">
+  <block wx:for="{{playlist}}" wx:key="id">
+    <x-playlist playList="{{item}}"></x-playlist>  
+  </block>
+</view>
